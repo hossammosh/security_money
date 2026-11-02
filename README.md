@@ -1,35 +1,31 @@
-# Security Money: remote testing and reproducible research
+# Security Money: AI-assisted practice and remote testing income
 
-Status: initial plan; no earnings, experiments, platform approvals, or publication outcomes claimed.
-Evidence reviewed: 2026-11-02.
+Current priority updated 2026-11-02: earn through legitimate remote testing while learning by doing. Deep-learning research and publication are OPTIONAL and inactive, not requirements or prerequisites.
 
-## Objective
-Mandatory joint objective: pursue legitimate paid remote app/website testing AND substantive deep-learning research in parallel. Research is essential, not a later or optional side project. The workflows reinforce each other; confidential client data and publication data remain separate.
+No platform approval, paid assignment, accepted finding, payout, or earnings has yet been verified in this project. No income guarantee.
 
-## Current constraints
-- Based outside the United States; exact country and payment eligibility not yet verified.
-- Beginner in hands-on security testing, with a background mainly in deep learning.
-- Work should be possible from home. Remote does not imply globally eligible.
-- Paid functional QA is not equivalent to penetration testing.
+## Current situation
+- Outside the United States; exact country and payout eligibility still need verification.
+- Beginner in practical security testing, with prior deep-learning knowledge.
+- Work must be possible from home. U.S.-remote is not necessarily international remote.
+- Start with functional website/mobile-app QA; do not market beginner work as expert penetration testing.
 
-## Two linked workstreams, separate data boundaries
-1. Field work: onboarding and authorized remote functional testing, with no guaranteed earnings or assignment volume.
-2. Deep-learning research, starting immediately: implement and evaluate a neural approach to a testing problem using rights-cleared evidence. The proposed first study includes representation learning/fine-tuning, non-neural and frozen-model baselines, ablations, and held-out evaluation.
-3. Safe connection: testing skills and publicly describable problem categories inform research questions. Re-create examples independently in owned/licensed environments. Never copy or repurpose client observations without the necessary permissions.
+## Active approach
+1. Investigate Test IO first and uTest second, verifying current country/payment eligibility and terms before work.
+2. Complete free onboarding and build a safe practice sample on owned or authorized training applications.
+3. Use AI for general learning, checklists, synthetic practice, and report formatting where authorized. Never assume permission to share client data or automate testing.
+4. Accept appropriate remote tasks if invited; manually reproduce issues and submit accurate reports.
+5. Measure effective return privately, including learning/onboarding, rejected findings, and waiting time. Review whether the work is worth continuing; no promised rates or timelines.
 
-Using a hosted AI assistant to draft reports alone does not satisfy the chosen project objective. Deep-learning research need not always train a new model from scratch, but this proposed study includes hands-on model adaptation and rigorous evaluation. The exact architecture and scientific novelty remain to be established.
+## Active documents
+- [Income-first action plan](plans/income_first.md)
+- [AI-assisted testing workflow and safe prompt templates](practice/ai_assisted_testing.md)
+- [Platform evidence and unresolved checks](plans/platform_review.md)
+- [Four-week checkpoints](plans/first_four_weeks.md)
+- [Confidentiality and public repository rules](governance/publication_rules.md)
 
-## Contents
-- [Platform review](plans/platform_review.md)
-- [Research protocol proposal](research/protocol.md)
-- [Publication and confidentiality rules](governance/publication_rules.md)
-- [Initial four-week plan](plans/first_four_weeks.md)
-- [Mandatory deep-learning decision](research/mandatory_deep_learning.md)
+## Research status
+[Previous research protocol](research/protocol.md) remains as inactive reference only. [Prior mandatory-research decision](research/mandatory_deep_learning.md) is superseded by the current income-first instruction. Do not impose research, training a model, or writing a paper as a condition for making progress.
 
-## Public repository boundary
-This repository is public. Never commit credentials, identity documents, bank/payment details, client reports, screenshots, invitations, recordings, confidential fees, private app builds, or undisclosed vulnerabilities. Redaction alone is not permission. Do not upload client material to third-party AI tools without explicit authorization.
-
-## Immediate next steps
-Verify exact country, supported payout route, devices, current terms, and remote-only assignment eligibility. Start with free onboarding rather than purchasing equipment or certifications. Review research novelty before investing in a full experiment.
-
-No formal manuscript has been written. No experiment has been run. This repository is a planning artifact, not evidence of qualification or publication acceptance.
+## Public repository
+Do not upload gh.txt, tokens, passwords, identity documents, banking/payment details, client app builds, screenshots, reports, private invitations, confidential fees, recordings, or undisclosed vulnerabilities. Keep sensitive work records outside GitHub and do not send them to Genspark or other AI services without explicit permission. Existing confidentiality safeguards remain active.

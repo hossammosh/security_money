@@ -1,3 +1,5 @@
+> INACTIVE / OPTIONAL: The current priority is AI-assisted practice and remote testing income. Research is not mandatory. This unexecuted proposal is retained only as reference.
+
 # Deep-learning research protocol proposal — no results yet
 
 Updated 2026-11-02 following the explicit requirement that deep-learning research is essential and must proceed alongside field work.
