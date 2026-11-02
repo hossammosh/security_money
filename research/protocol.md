@@ -1,53 +1,69 @@
-# Research protocol proposal — not a completed paper
+# Deep-learning research protocol proposal — no results yet
+
+Updated 2026-11-02 following the explicit requirement that deep-learning research is essential and must proceed alongside field work.
 
 ## Working title
-Evidence-Grounded AI Assistance for Reproducible Mobile-App Bug Reports: A Controlled Pilot Study
+Cross-Application Generalization and Uncertainty in Multimodal Deep Learning for Duplicate Mobile-App Bug Report Retrieval
 
-Status: proposed study; novelty not established; data, sample size, models, venue, and budget not finalized. No results exist.
+This is a candidate topic, not an approved final paper title or established novel contribution. The previous generic AI-report-assistance proposal is superseded. Do not interpret this revision as evidence that experiments have been conducted.
 
-## Motivation and boundary
-Connect practical QA skills with deep-learning research without repurposing confidential paid-testing data. Functional bug-report research is software-engineering research; it should not be labeled a cybersecurity evaluation unless genuine security outcomes are separately designed and tested.
+## Mandatory objective
+Do paid remote testing and substantive deep-learning research concurrently. A prompt wrapper or use of Genspark for report writing alone is not the research deliverable. This candidate study includes model implementation/adaptation, a train/validation/test protocol, non-neural and neural baselines, ablations, and an explicit evaluation of limitations. Training a model from scratch is not required. Other rigorous deep-learning research designs remain possible.
 
-## Prior art inspected
-1. ReCoDe / Mobile App Crowdsourced Test Report Consistency Detection via Deep Image-and-Text Fusion Understanding. Abstract and version history inspected: https://arxiv.org/abs/2108.07401 (v3, 2023); related journal DOI https://doi.org/10.1109/TSE.2023.3285787 . Work already studies text/screenshot consistency with deep learning. Full paper, dataset license, and reuse rights need review before reuse.
-2. Large Language Models for Mobile GUI Text Input Generation: An Empirical Study. Abstract and version history inspected: https://arxiv.org/abs/2404.08948 (v4, 2026). Work already studies LLM-assisted Android testing, context representations, feedback, and human assistance. Full paper and artifacts need review.
+## Candidate practical problem
+Given a new mobile-app bug report and its permitted screenshot(s), retrieve earlier reports describing the same underlying bug, and flag uncertain matches for human review. This is a prototype research task, not a platform integration or a promise of higher income. Never query or upload a platform's confidential report database or automate platform work without permission.
 
-These papers establish related work, not an absence of competing work. 'Using AI for app testing' is not, by itself, a defensible novelty claim. Conduct a broader current literature review before fixing the contribution.
+Duplicate retrieval can be studied using a legally obtained research corpus. Confirming impact on paid-platform acceptance or income would require a separately authorized study and cannot be inferred from offline accuracy.
 
-## Candidate research questions
-RQ1: Does evidence-constrained AI assistance improve independent reproduction success compared with a structured non-AI report template?
-RQ2: How often does unconstrained assistance add unsupported steps or observations, compared with evidence-constrained assistance?
-RQ3: What are the time, inference cost, and quality trade-offs for local versus hosted assistance on publication-cleared data?
-RQ3 is optional; keep scope feasible and do not conflate local execution with a complete privacy guarantee.
+## Prior art and novelty gate
+Previously inspected abstract sources:
+- Mobile App Crowdsourced Test Report Consistency Detection via Deep Image-and-Text Fusion Understanding: https://arxiv.org/abs/2108.07401
+- Large Language Models for Mobile GUI Text Input Generation: An Empirical Study: https://arxiv.org/abs/2404.08948
 
-## Data and experimental environment
-- Start with one or two open-source Android apps run locally in an emulator/device, with explicit license and asset checks.
-- Prefer known reproducible bugs or clearly labeled seeded bugs. Record app version, commit, OS, device/emulator, and reset procedure.
-- Use only recordings, logs, and screenshots made in the research environment with synthetic accounts and data.
-- Public availability alone does not grant redistribution rights. Review data licenses and privacy, including third-party issues/screenshots.
-- No paid client reports, binaries, fees, platform invitations, or customer data by default.
-- Potentially real vulnerabilities in open-source targets require responsible disclosure before release.
+These are related examples, not an exhaustive review or a verified gap in duplicate retrieval. Before choosing the final task, review existing duplicate-bug retrieval, multimodal report models, cross-project evaluation, calibration, and selective prediction. Read full papers and verify all citations. Do not claim that combining text and images is novel. Proceed only if an original or meaningful replication/benchmark contribution is justified for the intended venue.
 
-## Candidate conditions
-A: structured report template, no AI.
-B: generic AI report assistance using the same permitted evidence.
-C: evidence-grounded assistance requiring explicit evidence references for each factual claim and an 'unknown' response when evidence is absent.
+## Proposed architecture — adjustable after feasibility review
+- Text branch: pretrained transformer encoding the report description and reproduction steps.
+- Image branch: pretrained visual encoder for screenshots.
+- Baseline fusion: normalized embedding concatenation or a small learned fusion layer.
+- Candidate learned approach: parameter-efficient adaptation/contrastive training using duplicate and nonduplicate report pairs with hard negatives.
+- Similarity ranking followed by a validation-set-calibrated acceptance/abstention threshold.
 
-Keep evidence, time budget, and task difficulty comparable. Fix and record model versions, prompts, decoding settings, and tool access. Repeat stochastic runs where justified. Clearly distinguish seeded from naturally occurring bugs.
+Neural embeddings, multimodal fusion, contrastive learning, and calibration are standard ingredients. Their use alone is not a novelty claim. Inspect screenshots for irrelevant app-identity shortcuts; align branches carefully and record all model/data licenses.
 
-## Pilot then confirmatory evaluation
-Begin with a small feasibility pilot. Select final sample size from pilot variance, a practically meaningful effect, and an appropriate power/precision analysis; do not claim that a convenient small sample establishes broad effectiveness.
+## Research questions
+RQ1: Does the adapted multimodal approach outperform lexical and frozen-encoder baselines on unseen applications?
+RQ2: How do image/text ablations, hard negatives, and uncertainty thresholds change retrieval quality and false-match rates?
+RQ3: What is the quality/latency/compute trade-off on the actual available hardware?
 
-Use independent raters/testers where possible, blind to report condition, randomized/counterbalanced ordering, reset environments, and controls for learning/carryover. If using multiple human participants or their behavior/data, obtain informed consent and appropriate institutional ethics review or documented determination before collection. A single-author self-study can be a pilot but does not support population-level claims about novice testers.
+## Baselines and ablations
+- TF-IDF or BM25 text retrieval (non-neural).
+- Frozen text-encoder retrieval.
+- Adapted text-only retrieval.
+- Frozen text+image embeddings with simple fusion.
+- Adapted text+image approach.
+- Matched-budget ablations for image branch, adaptation, hard negatives, and abstention.
 
-## Measurements
-Primary: independent reproduction success under a fixed protocol.
-Secondary: completion time including verification/correction; report completeness under a predefined rubric; unsupported factual claims; model cost and latency; reviewer agreement; robustness across apps/bug classes.
+Use fair hyperparameter budgets and the same permitted evidence. Do not add complexity unless a simpler model establishes a useful baseline.
 
-Predefine the unit of analysis (bug/app/participant), handle clustering and repeated measures, report effect sizes and confidence intervals, and document exclusions/missing data. Do not treat repeated prompts on one bug as independent real-world bugs.
+## Dataset and ground truth
+Select a corpus only after verifying provenance, task fit, license, redistribution rights, privacy, sufficient duplicate labels, and group/app identifiers. A public issue is not automatically a licensed dataset. No suitable corpus is assumed to exist yet.
 
-## Bias and reproducibility safeguards
-Split by app/bug family where suitable; avoid tuning on evaluation cases; report possible training-data contamination; do not make an LLM judge the sole ground truth. Preserve negative results. Release only licensed, reviewed artifacts and allowed data.
+Fallback: create a clearly labeled pilot on owned/licensed apps with controlled known/seeded bugs, synthetic accounts, screenshots, and independently authored report variants. Disclose that seeded/constructed variants may be unlike real reports. Do not use generated paraphrases as a substitute for independent natural bug evidence or treat many paraphrases of one bug as many independent bugs.
 
-## Publication route
-Select a legitimate software-testing/software-engineering venue after reviewing fit, scope, novelty, author instructions, ethics and AI-use requirements. A preprint is not peer-reviewed acceptance. No acceptance, citation, deadline, or publication fee is assumed. AI may assist drafting, but humans must verify every citation, claim, experiment, and result. Never fabricate participants, measurements, or findings.
+No paid client reports, app builds, customer screenshots, fee data, or internal bug databases. Written permission and applicable privacy/ethics review are required before any exception. Participants and annotators require appropriate consent and ethics determination before collection.
+
+## Evaluation safeguards
+Split by application and underlying bug before generating pairs/variants. Never distribute screenshots, duplicates, near-duplicate reports, or variants of the same bug across training and test sets. Keep test apps untouched during tuning. Examine potential pretrained-model contamination and report limits. If there are too few independent apps/bugs, restrict conclusions to a pilot.
+
+Report Recall@k, MRR, and task-appropriate precision/recall for duplicate decisions; false-match rate and risk-coverage for abstention; latency, memory, inference/training cost, and repeated-seed variability. Specify labels, candidate-pool size, negative sampling, and deployment prevalence. Use calibrated probabilities only when a probability model and calibration evaluation support them; raw similarity is not probability.
+
+Use independent human/known-bug ground truth, not only LLM judgments. Report confidence intervals with clustering by independent app/bug as appropriate, effect sizes, failure cases, and negative results. Select sample size from pilot feasibility and precision/power needs rather than convenient report counts.
+
+## Field connection without data leakage
+During authorized testing, learn scope reading, reproducibility, device behavior, and report clarity. Use only general transferable skills and permitted public information to shape the research. Re-create safe examples independently. Do not recreate confidential proprietary bugs merely to evade NDA restrictions.
+
+Model use on paid assignments is a separate permission gate. Offline research results alone do not authorize AI use, scraping, automation, or third-party data transfer.
+
+## Publication and reproducibility
+Prepare a manuscript only after a defensible study. Release rights-cleared code, configurations, split manifests, model metadata, seeds, and artifacts. Human authors remain accountable; disclose AI assistance according to venue rules. Identify a legitimate testing/software-engineering venue after reviewing contribution fit. Research here is software testing, not validated cybersecurity detection. No earnings, results, deadlines, acceptance, or novelty are promised.

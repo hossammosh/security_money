@@ -1,19 +1,25 @@
-# Initial four-week plan
+# Integrated first four weeks: field testing AND deep-learning research
 
-This is a planning schedule, not a promise of income or publication within four weeks.
+Research is mandatory and starts in week 1. These are milestones, not guaranteed paid work, publication, or model improvements. Country, payout eligibility, devices, available time, and compute remain unverified.
 
-## Week 1 — eligibility and onboarding
-Privately verify country, identity/payment eligibility, devices, current terms, and work-from-home suitability. Investigate Test IO; investigate uTest only after reading the actual terms. Complete free onboarding. Do not purchase devices or certifications based on assumed future earnings. No public financial or client logs.
+## Suggested allocation
+A provisional 50/50 split between field work and research. Adjust to actual paid invitations and research needs while retaining both each week. No assumption of an available GPU or budget.
 
-## Week 2 — practice and authorized work
-Practice clear reports with expected/actual behavior, environment, reproducible steps, and permitted evidence. Accept only suitable authorized tasks. Learn foundational web security in legal labs. Keep professional client information out of research files and third-party AI unless expressly authorized.
+## Week 1
+Field: verify country/payment eligibility privately, read terms, complete free onboarding, and practice scope-compliant reports.
+Research: review duplicate-bug retrieval and multimodal deep learning, select a candidate corpus only after rights checks, inventory compute, and narrow the scientific contribution. No client material to AI or GitHub.
 
-## Week 3 — literature and research feasibility
-Read relevant papers beyond abstracts; build a source-verified literature matrix and check competing approaches. Choose a small licensed app environment and create synthetic test accounts. Draft a narrow contribution and verify whether available resources permit independent evaluation.
+## Week 2
+Field: accept suitable remote tasks if invited; learn report reproducibility and device troubleshooting. Decline prohibited automation/security activities.
+Research: create app/bug-grouped splits and ground-truth checks; implement lexical and frozen neural baselines on publication-cleared data. If no valid dataset exists, pause the claimed study and create an explicitly limited owned-app pilot instead.
 
-## Week 4 — pilot, not final claims
-Compare a structured template, generic AI assistance, and evidence-grounded assistance on own/publication-cleared evidence. Record time, unsupported claims, and reproduction outcomes under a predefined procedure. Obtain ethics review/consent where applicable BEFORE recruiting or collecting participant data. Use the pilot to revise scope and plan a valid sample size.
+## Week 3
+Field: continue approved work and improve reproducible reporting, without publishing project-specific information.
+Research: run a small text-only adaptation pilot and then add the image branch if resources/data permit. Compare against simpler baselines before proposing a larger method. Record configurations and failure cases.
+
+## Week 4
+Field: continue only tasks that fit remote requirements and platform rules. Assess actual progress privately; do not publish confidential fees or project statistics.
+Research: pilot cross-app evaluation, ablations, uncertainty behavior, and compute cost. Review leakage/label quality and plan the final sample size. Do not infer general effectiveness from a small pilot or start writing fabricated result sections.
 
 ## Decision gates
-Income: assess actual eligibility and invitations privately; no promised rates or public disclosure of confidential fees.
-Research: proceed only if novelty, data rights, evaluation independence, budget, and ethics are adequate. Null or negative findings must remain reportable. Do not submit a paper claiming outcomes before experiments are completed.
+Research proceeds only with sufficient rights-cleared data, defensible contribution, appropriate ethics determination, resources, and independent evaluation. Field work and research share skills, not unauthorized client data. If the candidate topic fails novelty/feasibility checks, revise the topic while preserving the mandatory deep-learning objective.
