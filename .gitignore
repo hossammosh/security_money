@@ -1,0 +1,14 @@
+# Credentials and private working material
+gh.txt
+*token*
+.env
+.env.*
+*.pem
+*.key
+credentials/
+private/
+client_data/
+raw_client_data/
+identity_documents/
+payment_records/
+__pycache__/
